@@ -1,0 +1,346 @@
+models:
+
+  Type:
+    id: id
+    name: string:50 nullable
+    relationships:
+      hasMany: 
+        - Category
+
+  Category:
+    id: id
+    type_id: id foreign:types
+    name: string:50 nullable
+    relationships:
+      hasMany: 
+        - Prosthes
+      belongsTo: 
+        - Type
+  
+  SpecificationShoulder:
+    id: id
+    category_id: foreign:categories
+    product_type: string:100 nullable
+    type_of_side: string:10 nullable
+    gripping_power: integer nullable
+    opening_width: integer nullable
+    voltage: decimal:8,2 nullable
+    gripping_speed: decimal:8,2 nullable
+    weight: decimal:8,2 nullable
+    color: string:50 nullable
+    material: string:50 nullable
+    relationships:
+      belongsTo: 
+        - Category
+
+  SpecificationForearm:
+    id: id
+    category_id: foreign:categories
+    product_type: string:100 nullable
+    type_of_side: string:10 nullable
+    max_fingers_load: integer nullable
+    max_weight: decimal:8,2 nullable
+    working_time: integer nullable
+    functions: string:100 nullable
+    color: string:50 nullable
+    material: string:50 nullable
+    relationships:
+      belongsTo: 
+        - Category
+
+  SpecificationWrist:
+    id: id
+    category_id: foreign:categories
+    product_type: string:100 nullable
+    type_of_side: string:10 nullable
+    arm_size: string:15 nullable
+    voltage: decimal:8,2 nullable
+    temperature: string:50 nullable
+    opening_width: integer nullable
+    gripping_power: integer nullable
+    gripping_speed: integer nullable
+    weight: integer nullable
+    color: string:60 nullable
+    material: string:60 nullable
+    relationships:
+      belongsTo: 
+        - Category
+
+  SpecificationFoot:
+    id: id
+    category_id: foreign:categories.id
+    product_type: string:100 nullable
+    amputation_rate: string:100 nullable
+    activity_level: string:20 nullable
+    max_weight: integer nullable
+    type_of_side: string:10 nullable
+    size_of_prosthes: string:20 nullable
+    weight: integer nullable
+    foot_shape: string:200 nullable
+    color: string:60 nullable
+    height: integer nullable
+    material: string:60 nullable
+    relationships:
+      belongsTo: 
+        - Category
+
+  SpecificationKnee:
+    id: id
+    category_id: foreign:categories.id
+    product_type: string:100 nullable
+    amputation_rate: string:100 nullable
+    activity_level: string:20 nullable
+    max_weight: integer nullable
+    weight: integer nullable
+    material: string:60 nullable
+    distal_part_connection: string:50 nullable
+    proximal_part_connection: string:50 nullable
+    knee_angle: integer nullable
+    system_height_prox: string:50 nullable
+    min_system_height_dist: string:50 nullable
+    max_system_height_dist: string:50 nullable
+    min_montage_height: string:50 nullable
+    max_montage_height: string:50 nullable
+    proximal_montage_height: string:50 nullable
+    min_dist_montage_height: string:50 nullable
+    max_dist_montage_height: string:50 nullable
+    relationships:
+      belongsTo: 
+        - Category
+  
+  SpecificationHip:
+    id: id
+    category_id: foreign:categories.id
+    product_type: string:100 nullable
+    activity_level: string:20 nullable
+    max_weight: integer nullable
+    weight: integer nullable
+    distal_part_connection: string:50 nullable
+    proximal_part_connection: string:50 nullable
+    t_angle: integer nullable
+    system_height: integer nullable
+    montage_height: integer nullable
+    type_of_side: string:10 nullable
+    material: string:60 nullable
+    relationships:
+      belongsTo:
+        - Category
+
+  Creator:
+    id: id
+    name: string:100 nullable
+    country: string:30 nullable
+    description: text nullable
+    relationships:
+      hasMany: 
+        - Prosthes
+
+  User:
+    id: id
+    name: string:50
+    user_role: integer default:0
+    relationships:
+      hasMany:
+        - Wishlist
+        - Review
+        - Cart
+        - Order
+        - ActiveRequest
+        - UserCharacterisctic
+
+  Prosthes:
+    id: id
+    specifiable_id: integer
+    specifiable_type: string:50
+    category_id: foreign:categories.id
+    creator_id: foreign:creators.id
+    status: tinyInteger default:1
+    article: string:40 nullable
+    name: string:40 nullable
+    description: text nullable
+    photos: json nullable
+    price: decimal:10,2 nullable
+    year_of_creating: string(12) nullable
+    created_at: timestamp nullable
+    updated_at: timestamp nullable
+    relationships:
+      hasMany: 
+        - Wishlist
+        - Cart
+        - Reviews
+        - ProsthesOrder
+      belongsTo: 
+        - Category
+        - Creator
+
+  RequestType:
+    id: id
+    title: string:50 nullable
+    relationships:
+      hasMany: 
+        - ActiveRequest
+
+  ActiveRequest:
+    id: id
+    user_id: foreign:users.id
+    request_id: foreign:requestType.id
+    request_status: tinyInteger default:1
+    name: string:50
+    surname: string:50
+    patronymic: string:50
+    country: string:50
+    town: string:50
+    telephone_number: string:20 nullable
+    user_email: string:50 nullable
+    message_text: text nullable
+    created_at: timestamp nullable
+    relationships:
+      belongsTo:
+        - RequestType
+        - User
+
+  Characteristic:
+    id: id
+    weight: decimal:8,1 nullable
+    height: decimal:8,2 nullable
+    age: integer nullable
+    details: text nullable
+    created_at: timestamp nullable
+    relationships:
+      hasMany: 
+        - UserCharacterisctic
+  
+  UserCharacterisctic:
+    id: id
+    user_id: foreign:users.id
+    characteristic_id: foreign:characteristics.id
+    relationships:
+      belongsTo:
+        - Characteristic
+        - User
+
+  Order:
+    id: id
+    user_id: foreign:users.id
+    isactive: tinyInteger
+    ispayed: tinyInteger
+    payment_method: string(30)
+    name: string:50
+    surname: string:50
+    patronymic: string:50
+    country: string:50
+    town: string:50
+    area: string:50
+    street: string:50
+    house: string:10
+    apartment: string:10
+    telephone_number: string:20 nullable
+    user_email: string:50 nullable
+    message_text: text nullable
+    order_sum: decimal:8,2 nullable
+    created_at: timestamp nullable
+    updated_at: timestamp nullable
+    relationships:
+      belongsTo: 
+        - User
+      hasMany: 
+        - ProsthesOrder
+
+  ProsthesOrder:
+    id: id
+    order_id: foreign:orders.id
+    prosthes_id: foreign:prosthes.id
+    count: integer default:1
+    created_at: timestamp nullable
+    relationships:
+      belongsTo:
+        - Order
+        - Prosthes
+  
+  Cart:
+    id: id
+    prosthes_id: foreign:prosthes.id
+    user_id: foreign:users.id
+    count: integer default:1
+    side: string:5 nullable
+    created_at: timestamp nullable
+    updated_at: timestamp nullable
+    relationships:
+      belongsTo:
+        - User
+        - Prosthes
+
+  Review:
+    id: id
+    prosthes_id: foreign:prosthes.id
+    user_id: foreign:users.id
+    rate: integer nullable
+    m_text: text nullable
+    created_at: timestamp nullable
+    updated_at: timestamp nullable
+    relationships:
+      belongsTo:
+        - User
+        - Prosthes
+
+  Wishlist:
+    id: id
+    prosthes_id: foreign:prosthes.id
+    user_id: foreign:users.id
+    created_at: timestamp nullable
+    updated_at: timestamp nullable
+    relationships:
+      belongsTo:
+        - User
+        - Prosthes
+  
+  GuestRequest:
+    request_id: foreign:requestType.id
+    request_status: tinyInteger default:1
+    fullname: string:75
+    country: string:45
+    town: string:45
+    email: string:45
+    phone: string:45
+    details: text nullable
+    created_at: timestamp nullable
+
+
+controllers:
+  GuestRequest:
+    resource: web
+  Prosthes:
+    resource: web
+  Cart:
+    resource: web
+  Order:
+    resource: web
+  Type:
+    resource: web
+  Category:
+    resource: web
+  SpecificationWrist:
+    resource: web
+  SpecificationFoot:
+    resource: web
+  SpecificationKnee:
+    resource: web
+  SpecificationHip:
+    resource: web
+  Creator:
+    resource: web
+  ActiveRequest:
+    resource: web
+  RequestType:
+    resource: web
+  Characteristic:
+    resource: web
+  UserCharacterisctic:
+    resource: web
+  ProsthesOrder:
+    resource: web
+  Review:
+    resource: web
+  Wishlist:
+    resource: web
+
