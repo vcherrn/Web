@@ -1,0 +1,256 @@
+created:
+    - app/Http/Controllers/ProsthesController.php
+    - app/Http/Controllers/CartController.php
+    - app/Http/Controllers/OrderController.php
+    - app/Http/Controllers/HistoryOrderController.php
+    - app/Http/Controllers/TypeController.php
+    - app/Http/Controllers/CategoryController.php
+    - app/Http/Controllers/SpecificationWristController.php
+    - app/Http/Controllers/SpecificationFootController.php
+    - app/Http/Controllers/SpecificationKneeController.php
+    - app/Http/Controllers/SpecificationHipController.php
+    - app/Http/Controllers/CreatorController.php
+    - app/Http/Controllers/PhotoController.php
+    - app/Http/Controllers/ActiveRequestController.php
+    - app/Http/Controllers/RequestTypeController.php
+    - app/Http/Controllers/CharacteristicController.php
+    - app/Http/Controllers/UserCharacteriscticController.php
+    - app/Http/Controllers/ProsthesOrderController.php
+    - app/Http/Controllers/HistoryProsthesOrderController.php
+    - app/Http/Controllers/ReviewController.php
+    - app/Http/Controllers/WishlistController.php
+    - database/factories/TypeFactory.php
+    - database/factories/CategoryFactory.php
+    - database/factories/SpecificationShoulderFactory.php
+    - database/factories/SpecificationForearmFactory.php
+    - database/factories/SpecificationWristFactory.php
+    - database/factories/SpecificationFootFactory.php
+    - database/factories/SpecificationKneeFactory.php
+    - database/factories/SpecificationHipFactory.php
+    - database/factories/CreatorFactory.php
+    - database/factories/UserFactory.php
+    - database/factories/ProsthesFactory.php
+    - database/factories/PhotoFactory.php
+    - database/factories/RequestTypeFactory.php
+    - database/factories/ActiveRequestFactory.php
+    - database/factories/CharacteristicFactory.php
+    - database/factories/UserCharacteriscticFactory.php
+    - database/factories/OrderFactory.php
+    - database/factories/ProsthesOrderFactory.php
+    - database/factories/HistoryOrderFactory.php
+    - database/factories/HistoryProsthesOrderFactory.php
+    - database/factories/CartFactory.php
+    - database/factories/ReviewFactory.php
+    - database/factories/WishlistFactory.php
+    - database/migrations/2023_12_02_122627_create_types_table.php
+    - database/migrations/2023_12_02_122628_create_categories_table.php
+    - database/migrations/2023_12_02_122629_create_specification_shoulders_table.php
+    - database/migrations/2023_12_02_122630_create_specification_forearms_table.php
+    - database/migrations/2023_12_02_122631_create_specification_wrists_table.php
+    - database/migrations/2023_12_02_122632_create_specification_feet_table.php
+    - database/migrations/2023_12_02_122633_create_specification_knees_table.php
+    - database/migrations/2023_12_02_122634_create_specification_hips_table.php
+    - database/migrations/2023_12_02_122635_create_creators_table.php
+    - database/migrations/2023_12_02_122636_create_users_table.php
+    - database/migrations/2023_12_02_122637_create_prosthes_table.php
+    - database/migrations/2023_12_02_122638_create_photos_table.php
+    - database/migrations/2023_12_02_122639_create_request_types_table.php
+    - database/migrations/2023_12_02_122640_create_active_requests_table.php
+    - database/migrations/2023_12_02_122641_create_characteristics_table.php
+    - database/migrations/2023_12_02_122642_create_user_characterisctics_table.php
+    - database/migrations/2023_12_02_122643_create_orders_table.php
+    - database/migrations/2023_12_02_122644_create_prosthes_orders_table.php
+    - database/migrations/2023_12_02_122645_create_history_orders_table.php
+    - database/migrations/2023_12_02_122646_create_history_prosthes_orders_table.php
+    - database/migrations/2023_12_02_122647_create_carts_table.php
+    - database/migrations/2023_12_02_122648_create_reviews_table.php
+    - database/migrations/2023_12_02_122649_create_wishlists_table.php
+    - app/Models/Type.php
+    - app/Models/Category.php
+    - app/Models/SpecificationShoulder.php
+    - app/Models/SpecificationForearm.php
+    - app/Models/SpecificationWrist.php
+    - app/Models/SpecificationFoot.php
+    - app/Models/SpecificationKnee.php
+    - app/Models/SpecificationHip.php
+    - app/Models/Creator.php
+    - app/Models/User.php
+    - app/Models/Prosthes.php
+    - app/Models/Photo.php
+    - app/Models/RequestType.php
+    - app/Models/ActiveRequest.php
+    - app/Models/Characteristic.php
+    - app/Models/UserCharacterisctic.php
+    - app/Models/Order.php
+    - app/Models/ProsthesOrder.php
+    - app/Models/HistoryOrder.php
+    - app/Models/HistoryProsthesOrder.php
+    - app/Models/Cart.php
+    - app/Models/Review.php
+    - app/Models/Wishlist.php
+    - tests/Feature/Http/Controllers/ProsthesControllerTest.php
+    - tests/Feature/Http/Controllers/CartControllerTest.php
+    - tests/Feature/Http/Controllers/OrderControllerTest.php
+    - tests/Feature/Http/Controllers/HistoryOrderControllerTest.php
+    - tests/Feature/Http/Controllers/TypeControllerTest.php
+    - tests/Feature/Http/Controllers/CategoryControllerTest.php
+    - tests/Feature/Http/Controllers/SpecificationWristControllerTest.php
+    - tests/Feature/Http/Controllers/SpecificationFootControllerTest.php
+    - tests/Feature/Http/Controllers/SpecificationKneeControllerTest.php
+    - tests/Feature/Http/Controllers/SpecificationHipControllerTest.php
+    - tests/Feature/Http/Controllers/CreatorControllerTest.php
+    - tests/Feature/Http/Controllers/PhotoControllerTest.php
+    - tests/Feature/Http/Controllers/ActiveRequestControllerTest.php
+    - tests/Feature/Http/Controllers/RequestTypeControllerTest.php
+    - tests/Feature/Http/Controllers/CharacteristicControllerTest.php
+    - tests/Feature/Http/Controllers/UserCharacteriscticControllerTest.php
+    - tests/Feature/Http/Controllers/ProsthesOrderControllerTest.php
+    - tests/Feature/Http/Controllers/HistoryProsthesOrderControllerTest.php
+    - tests/Feature/Http/Controllers/ReviewControllerTest.php
+    - tests/Feature/Http/Controllers/WishlistControllerTest.php
+    - app/Http/Requests/ProstheStoreRequest.php
+    - app/Http/Requests/ProstheUpdateRequest.php
+    - app/Http/Requests/CartStoreRequest.php
+    - app/Http/Requests/CartUpdateRequest.php
+    - app/Http/Requests/OrderStoreRequest.php
+    - app/Http/Requests/OrderUpdateRequest.php
+    - app/Http/Requests/HistoryOrderStoreRequest.php
+    - app/Http/Requests/HistoryOrderUpdateRequest.php
+    - app/Http/Requests/TypeStoreRequest.php
+    - app/Http/Requests/TypeUpdateRequest.php
+    - app/Http/Requests/CategoryStoreRequest.php
+    - app/Http/Requests/CategoryUpdateRequest.php
+    - app/Http/Requests/SpecificationWristStoreRequest.php
+    - app/Http/Requests/SpecificationWristUpdateRequest.php
+    - app/Http/Requests/SpecificationFootStoreRequest.php
+    - app/Http/Requests/SpecificationFootUpdateRequest.php
+    - app/Http/Requests/SpecificationKneeStoreRequest.php
+    - app/Http/Requests/SpecificationKneeUpdateRequest.php
+    - app/Http/Requests/SpecificationHipStoreRequest.php
+    - app/Http/Requests/SpecificationHipUpdateRequest.php
+    - app/Http/Requests/CreatorStoreRequest.php
+    - app/Http/Requests/CreatorUpdateRequest.php
+    - app/Http/Requests/PhotoStoreRequest.php
+    - app/Http/Requests/PhotoUpdateRequest.php
+    - app/Http/Requests/ActiveRequestStoreRequest.php
+    - app/Http/Requests/ActiveRequestUpdateRequest.php
+    - app/Http/Requests/RequestTypeStoreRequest.php
+    - app/Http/Requests/RequestTypeUpdateRequest.php
+    - app/Http/Requests/CharacteristicStoreRequest.php
+    - app/Http/Requests/CharacteristicUpdateRequest.php
+    - app/Http/Requests/UserCharacteriscticStoreRequest.php
+    - app/Http/Requests/UserCharacteriscticUpdateRequest.php
+    - app/Http/Requests/ProsthesOrderStoreRequest.php
+    - app/Http/Requests/ProsthesOrderUpdateRequest.php
+    - app/Http/Requests/HistoryProsthesOrderStoreRequest.php
+    - app/Http/Requests/HistoryProsthesOrderUpdateRequest.php
+    - app/Http/Requests/ReviewStoreRequest.php
+    - app/Http/Requests/ReviewUpdateRequest.php
+    - app/Http/Requests/WishlistStoreRequest.php
+    - app/Http/Requests/WishlistUpdateRequest.php
+    - resources/views/prosthe/index.blade.php
+    - resources/views/prosthe/create.blade.php
+    - resources/views/prosthe/show.blade.php
+    - resources/views/prosthe/edit.blade.php
+    - resources/views/cart/index.blade.php
+    - resources/views/cart/create.blade.php
+    - resources/views/cart/show.blade.php
+    - resources/views/cart/edit.blade.php
+    - resources/views/order/index.blade.php
+    - resources/views/order/create.blade.php
+    - resources/views/order/show.blade.php
+    - resources/views/order/edit.blade.php
+    - resources/views/historyOrder/index.blade.php
+    - resources/views/historyOrder/create.blade.php
+    - resources/views/historyOrder/show.blade.php
+    - resources/views/historyOrder/edit.blade.php
+    - resources/views/type/index.blade.php
+    - resources/views/type/create.blade.php
+    - resources/views/type/show.blade.php
+    - resources/views/type/edit.blade.php
+    - resources/views/category/index.blade.php
+    - resources/views/category/create.blade.php
+    - resources/views/category/show.blade.php
+    - resources/views/category/edit.blade.php
+    - resources/views/specificationWrist/index.blade.php
+    - resources/views/specificationWrist/create.blade.php
+    - resources/views/specificationWrist/show.blade.php
+    - resources/views/specificationWrist/edit.blade.php
+    - resources/views/specificationFoot/index.blade.php
+    - resources/views/specificationFoot/create.blade.php
+    - resources/views/specificationFoot/show.blade.php
+    - resources/views/specificationFoot/edit.blade.php
+    - resources/views/specificationKnee/index.blade.php
+    - resources/views/specificationKnee/create.blade.php
+    - resources/views/specificationKnee/show.blade.php
+    - resources/views/specificationKnee/edit.blade.php
+    - resources/views/specificationHip/index.blade.php
+    - resources/views/specificationHip/create.blade.php
+    - resources/views/specificationHip/show.blade.php
+    - resources/views/specificationHip/edit.blade.php
+    - resources/views/creator/index.blade.php
+    - resources/views/creator/create.blade.php
+    - resources/views/creator/show.blade.php
+    - resources/views/creator/edit.blade.php
+    - resources/views/photo/index.blade.php
+    - resources/views/photo/create.blade.php
+    - resources/views/photo/show.blade.php
+    - resources/views/photo/edit.blade.php
+    - resources/views/activeRequest/index.blade.php
+    - resources/views/activeRequest/create.blade.php
+    - resources/views/activeRequest/show.blade.php
+    - resources/views/activeRequest/edit.blade.php
+    - resources/views/requestType/index.blade.php
+    - resources/views/requestType/create.blade.php
+    - resources/views/requestType/show.blade.php
+    - resources/views/requestType/edit.blade.php
+    - resources/views/characteristic/index.blade.php
+    - resources/views/characteristic/create.blade.php
+    - resources/views/characteristic/show.blade.php
+    - resources/views/characteristic/edit.blade.php
+    - resources/views/userCharacterisctic/index.blade.php
+    - resources/views/userCharacterisctic/create.blade.php
+    - resources/views/userCharacterisctic/show.blade.php
+    - resources/views/userCharacterisctic/edit.blade.php
+    - resources/views/prosthesOrder/index.blade.php
+    - resources/views/prosthesOrder/create.blade.php
+    - resources/views/prosthesOrder/show.blade.php
+    - resources/views/prosthesOrder/edit.blade.php
+    - resources/views/historyProsthesOrder/index.blade.php
+    - resources/views/historyProsthesOrder/create.blade.php
+    - resources/views/historyProsthesOrder/show.blade.php
+    - resources/views/historyProsthesOrder/edit.blade.php
+    - resources/views/review/index.blade.php
+    - resources/views/review/create.blade.php
+    - resources/views/review/show.blade.php
+    - resources/views/review/edit.blade.php
+    - resources/views/wishlist/index.blade.php
+    - resources/views/wishlist/create.blade.php
+    - resources/views/wishlist/show.blade.php
+    - resources/views/wishlist/edit.blade.php
+updated:
+    - routes/web.php
+models:
+    User: { id: id, name: 'string:50', user_role: 'integer default:0', relationships: { hasMany: 'Wishlist Review Cart Order HistoryOrder ActiveRequest UserCharacterisctic' } }
+    Type: { id: id, name: 'string:50 nullable', relationships: { hasMany: Category } }
+    Category: { id: id, type_id: 'id foreign:types', relationships: { hasMany: Prosthes, belongsTo: Type } }
+    SpecificationShoulder: { id: id, category_id: 'foreign:categories', product_type: 'string:100 nullable', type_of_side: 'string:10 nullable', gripping_power: 'integer nullable', opening_width: 'integer nullable', voltage: 'decimal:8,2 nullable', gripping_speed: 'decimal:8,2 nullable', weight: 'decimal:8,2 nullable', color: 'string:50 nullable', material: 'string:50 nullable', relationships: { morphOne: Prosthes, belongsTo: Category } }
+    SpecificationForearm: { id: id, category_id: 'foreign:categories', product_type: 'string:100 nullable', type_of_side: 'string:10 nullable', max_fingers_load: 'integer nullable', max_weight: 'decimal:8,2 nullable', working_time: 'integer nullable', functions: 'string:100 nullable', color: 'string:50 nullable', material: 'string:50 nullable', relationships: { morphOne: Prosthes, belongsTo: Category } }
+    SpecificationWrist: { id: id, category_id: 'foreign:categories', product_type: 'string:100 nullable', type_of_side: 'string:10 nullable', arm_size: 'string:15 nullable', voltage: 'decimal:8,2 nullable', temperature: 'string:50 nullable', opening_width: 'integer nullable', gripping_power: 'integer nullable', gripping_speed: 'integer nullable', weight: 'integer nullable', color: 'string:60 nullable', material: 'string:60 nullable', relationships: { morphOne: Prosthes, belongsTo: Category } }
+    SpecificationFoot: { id: id, category_id: 'foreign:categories.id', product_type: 'string:100 nullable', amputation_rate: 'string:100 nullable', activity_level: 'string:20 nullable', max_weight: 'integer nullable', type_of_side: 'string:10 nullable', size_of_prosthes: 'string:20 nullable', weight: 'integer nullable', foot_shape: 'string:200 nullable', color: 'string:60 nullable', height: 'integer nullable', material: 'string:60 nullable', relationships: { morphOne: Prosthes, belongsTo: Category } }
+    SpecificationKnee: { id: id, category_id: 'foreign:categories.id', product_type: 'string:100 nullable', amputation_rate: 'string:100 nullable', activity_level: 'string:20 nullable', max_weight: 'integer nullable', weight: 'integer nullable', material: 'string:60 nullable', distal_part_connection: 'string:50 nullable', proximal_part_connection: 'string:50 nullable', knee_angle: 'integer nullable', system_height_prox: 'string:50 nullable', min_system_height_dist: 'string:50 nullable', max_system_height_dist: 'string:50 nullable', min_montage_height: 'string:50 nullable', max_montage_height: 'string:50 nullable', proximal_montage_height: 'string:50 nullable', min_dist_montage_height: 'string:50 nullable', max_dist_montage_height: 'string:50 nullable', relationships: { morphOne: Prosthes, belongsTo: Category } }
+    SpecificationHip: { id: id, category_id: 'foreign:categories.id', product_type: 'string:100 nullable', activity_level: 'string:20 nullable', max_weight: 'integer nullable', weight: 'integer nullable', distal_part_connection: 'string:50 nullable', proximal_part_connection: 'string:50 nullable', t_angle: 'integer nullable', system_height: 'integer nullable', montage_height: 'integer nullable', type_of_side: 'string:10 nullable', material: 'string:60 nullable', relationships: { morphOne: Prosthes, belongsTo: Category } }
+    Creator: { id: id, name: 'string:100 nullable', country: 'string:30 nullable', description: 'text nullable', relationships: { hasMany: Prosthes } }
+    Prosthes: { id: id, specifiable_id: integer, specifiable_type: 'string:50', category_id: 'foreign:categories.id', creator_id: 'foreign:creators.id', status: boolean, article: 'string:40 nullable', name: 'string:40 nullable', description: 'text nullable', photos: 'text nullable', price: 'decimal:8,2 nullable', year_of_creating: 'integer nullable', created_at: 'timestamp nullable', updated_at: 'timestamp nullable', relationships: { hasMany: 'Photo Wishlist Cart Reviews ProsthesOrder HistoryProsthesOrder', belongsTo: 'Category Creator', morphTo: 'SpecificationWrist SpecificationFoot SpecificationKnee SpecificationHip specificationForearm SpecificationShoulder' } }
+    Photo: { id: id, prosthes_id: 'foreign:prostheses.id', path: 'text nullable', relationships: { belongsTo: Prosthes } }
+    RequestType: { id: id, title: 'string:50 nullable', relationships: { hasMany: ActiveRequest } }
+    ActiveRequest: { id: id, user_id: 'foreign:users.id', request_id: 'foreign:requestType.id', request_status: boolean, name: 'string:50', surname: 'string:50', patronymic: 'string:50', country: 'string:50', town: 'string:50', telephone_number: 'string:20 nullable', user_email: 'string:50 nullable', message_text: 'text nullable', created_at: 'timestamp nullable', relationships: { belongsTo: 'RequestType User' } }
+    Characteristic: { id: id, right_hand: 'text nullable', left_hand: 'text nullable', right_leg: 'text nullable', left_leg: 'text nullable', weight: 'decimal:8,1 nullable', height: 'decimal:8,2 nullable', age: 'integer nullable', description: 'text nullable', created_at: 'timestamp nullable', relationships: { hasMany: UserCharacterisctic } }
+    UserCharacterisctic: { id: id, user_id: 'foreign:users.id', characteristic_id: 'foreign:characteristics.id', relationships: { belongsTo: 'Characteristic User' } }
+    Order: { id: id, user_id: 'foreign:users.id', name: 'string:50', surname: 'string:50', patronymic: 'string:50', country: 'string:50', town: 'string:50', area: 'string:50', street: 'string:50', house: 'string:10', apartment: 'string:10', telephone_number: 'string:20 nullable', user_email: 'string:50 nullable', message_text: 'text nullable', order_sum: 'decimal:8,2 nullable', created_at: 'timestamp nullable', relationships: { belongsTo: User, hasMany: ProsthesOrder } }
+    ProsthesOrder: { id: id, order_id: 'foreign:orders.id', prosthes_id: 'foreign:prosthes.id', count: 'integer default:1', created_at: 'timestamp nullable', relationships: { belongsTo: 'Order Prosthes' } }
+    HistoryOrder: { id: id, user_id: 'foreign:users.id', name: 'string:50', surname: 'string:50', patronymic: 'string:50', country: 'string:50', town: 'string:50', area: 'string:50', street: 'string:50', house: 'string:10', apartment: 'string:10', telephone_number: 'string:20 nullable', user_email: 'string:50 nullable', message_text: 'text nullable', order_sum: 'decimal:8,2 nullable', created_at: 'timestamp nullable', relationships: { belongsTo: User, hasMany: HistoryProsthesOrder } }
+    HistoryProsthesOrder: { id: id, order_id: 'foreign:historyOrders.id', prosthes_id: 'foreign:prosthes.id', count: integer, created_at: 'timestamp nullable', relationships: { belongsTo: 'HistoryOrder Prosthes' } }
+    Cart: { id: id, prosthes_id: 'foreign:prosthes.id', user_id: 'foreign:users.id', count: 'integer default:1', created_at: 'timestamp nullable', updated_at: 'timestamp nullable', relationships: { belongsTo: 'User Prosthes' } }
+    Review: { id: id, prosthes_id: 'foreign:prosthes.id', user_id: 'foreign:users.id', m_text: 'text nullable', created_at: 'timestamp nullable', updated_at: 'timestamp nullable', relationships: { belongsTo: 'User Prosthes' } }
+    Wishlist: { id: id, prosthes_id: 'foreign:prosthes.id', user_id: 'foreign:users.id', created_at: 'timestamp nullable', updated_at: 'timestamp nullable', relationships: { belongsTo: 'User Prosthes' } }

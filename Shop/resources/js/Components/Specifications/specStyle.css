@@ -1,0 +1,28 @@
+.scrollable-table {
+    max-height: 300px;
+    overflow-y: auto;
+   
+  }
+  
+  .table-spec {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 10px;
+    table-layout: fixed;
+  }
+  
+  .table-spec th,
+  .table-spec td {
+    padding: 8px;
+    border: 1px solid #ddd;
+
+    width: 10%;
+  }
+  .table-spec td {
+    width: 30%;
+    word-break: break-word;
+  }
+  
+  .table-spec th {
+    background-color: #f2f2f2;
+  }
